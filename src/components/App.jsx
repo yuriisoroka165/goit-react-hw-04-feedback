@@ -19,7 +19,7 @@ export default function App() {
 
     const countPositiveFeedbackPercentage = () => {
         const totalFeedback = countTotalFeedback();
-        return (good / totalFeedback) * 100;
+        return ((good / totalFeedback) * 100).toFixed(2);
     };
 
     const options = Object.keys(feedback);
