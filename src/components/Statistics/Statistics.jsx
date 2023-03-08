@@ -1,7 +1,13 @@
 import PropTypes from "prop-types";
-import css from "./FeedbackApp.module.css";
+import css from "./Statistics.module.css";
 
-const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
+export default function Statistics({
+    good,
+    neutral,
+    bad,
+    total,
+    positivePercentage,
+}) {
     return (
         <div className={css.feedback__statistics_container}>
             <span>Good: {good}</span>
@@ -11,7 +17,7 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
             <span>Total: {positivePercentage.toFixed(2)}%</span>
         </div>
     );
-};
+}
 
 Statistics.propTypes = {
     good: PropTypes.number.isRequired,
@@ -20,5 +26,3 @@ Statistics.propTypes = {
     total: PropTypes.number.isRequired,
     positivePercentage: PropTypes.number.isRequired,
 };
-
-export default Statistics;
