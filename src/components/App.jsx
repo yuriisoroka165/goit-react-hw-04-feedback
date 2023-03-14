@@ -10,8 +10,11 @@ export default function App() {
 
     const onLeaveFeedback = event => {
         const { name } = event.target;
-        setFeedback(prevFeedback => ({ ...prevFeedback, [name]: prevFeedback[name] + 1 }));
-    }
+        setFeedback(prevFeedback => ({
+            ...prevFeedback,
+            [name]: prevFeedback[name] + 1,
+        }));
+    };
 
     const countTotalFeedback = () => {
         return good + neutral + bad;
